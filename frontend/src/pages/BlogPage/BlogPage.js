@@ -44,6 +44,10 @@ const BlogPage = () => {
     const getBlog = async () => {
         try {
             const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/blog/get-blog/${slug}`);
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
             setBlog(data?.blog);
             setLikes(data?.totalLikes);
             getRelatedBlogs(data?.blog?._id, data?.blog?.category?._id)
@@ -86,7 +90,8 @@ const BlogPage = () => {
     };
     useEffect(() => {
         getBlog();
-    }, []);
+
+    }, [slug]);
 
     useEffect(() => {
         checkLikedStatus();
@@ -128,11 +133,6 @@ const BlogPage = () => {
         }
     };
     return (
-
-        // <meta name="description" content={description} />
-        // <meta name="keywords" content={keywords} />
-        // <meta name='author' content={author} />
-
         <Layout
             title={blog?.title}
             description={blog?.description}

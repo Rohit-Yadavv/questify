@@ -33,9 +33,7 @@ const Layout = ({ children, title, description, keywords, author, headerBg, slug
                 <meta property="og:site_name" content="Questify | Explore Now"></meta>
                 {/* <meta property="og:image" content={`https://www.questify.site/api/v1/blog/blog-photo-direct/${id}`} /> */}
                 <meta property="og:image" content={`https://www.questify.site/api/v1/blog/blog-photo-direct/${id}`} />
-
                 <meta name="google-adsense-account" content="ca-pub-1706232639182146" />
-
                 <meta name="robots" content="index, follow" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1706232639182146"
                     crossorigin="anonymous"></script>
