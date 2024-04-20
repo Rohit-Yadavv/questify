@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styles.footerBottom}>
-                <p>&copy; 2023 Questify. All rights reserved.</p>
+                <p> created with ❤️ by Rohit </p>
             </div>
         </footer>
 
