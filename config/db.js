@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'; ``
+import mongoose from 'mongoose'; 
 import colors from 'colors';
 
 // Function to connect to the MongoDB database
