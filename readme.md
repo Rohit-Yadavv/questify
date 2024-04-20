@@ -38,11 +38,10 @@ Questify isn't just a platform for sharing articles it is a place for learning a
 To install and run Questify locally, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/rohit-yadavv/questify.git
    ```
-
-````
 
 2. Navigate to the project directory:
 
@@ -80,5 +79,3 @@ Please ensure your code adheres to the existing code style and conventions. Also
 ## Live Link
 
 [Visit Questify](questify.site)
-
-````
