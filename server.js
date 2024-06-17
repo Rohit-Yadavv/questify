@@ -12,19 +12,16 @@ import cors from 'cors';
 
 // Load environment variables from .env file
 dotenv.config();
-
-// Create the Express app
+ 
 const app = express();
 
 // Middlewares
 // Log HTTP requests in development mode
-app.use(morgan('dev'));
-// Parse incoming JSON data in the request body
+app.use(morgan('dev')); 
 app.use(express.json());
 // Enable Cross-Origin Resource Sharing (CORS) for all routes
 app.use(cors());
 // for deployment
-
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -36,16 +33,11 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 
-// Routes
-// Routes for authentication
-app.use('/api/v1/auth', authrouter);
-// Routes for blogss
-app.use('/api/v1/blog', blogrouter);
-// Routes for categories
-app.use('/api/v1/category', categoryrouter);
-// Routes for contact
-app.use('/api/v1/contact', contactRouter);
-// Routes for connection
+// Routes 
+app.use('/api/v1/auth', authrouter); 
+app.use('/api/v1/blog', blogrouter); 
+app.use('/api/v1/category', categoryrouter); 
+app.use('/api/v1/contact', contactRouter); 
 app.use('/api/v1/connect', connectRouter);
 
 // rest api deployment

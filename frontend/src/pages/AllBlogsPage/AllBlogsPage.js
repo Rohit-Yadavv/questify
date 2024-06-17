@@ -17,6 +17,7 @@ const AllBlogsPage = () => {
             const response = await axios.get(`${process.env.REACT_APP_API}/api/v1/blog/all-blogs`);
             setProgress(80);
             if (response.data?.success) {
+                console.log(response.data.blogs)
                 setBlogs(response.data?.blogs);
             }
         } catch (error) {
@@ -42,7 +43,7 @@ const AllBlogsPage = () => {
                         <BlogCard
                             key={b?._id}
                             slug={b?.slug}
-                            createAt={b?.createAt}
+                            createdAt={b?.updatedAt}
                             id={b?._id}
                             title={b?.title}
                             description={b?.description}
