@@ -56,7 +56,7 @@ const RegisterPage = () => {
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="phone">Phone No</label>
-                        <input value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" id="phone" name="phone" required />
+                        <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" id="phone" name="phone" required />
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor="answer">What is your favourite Movie ?</label>
