@@ -3,8 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../context/authContext";
-import { Editor } from "@tinymce/tinymce-react";
-import "react-quill/dist/quill.snow.css";
+import { Editor } from "@tinymce/tinymce-react"; 
 
 const CreateBlog = () => {
   const [auth, setAuth] = useAuth();
