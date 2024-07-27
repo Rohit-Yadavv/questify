@@ -61,7 +61,7 @@ const CreateBlog = () => {
           },
         }
       );
-      if(response.data.success) {
+      if (response.data.success) {
         alert("Blog created successfully");
       } else {
         alert("Failed to create blog");
@@ -111,10 +111,10 @@ const CreateBlog = () => {
 
       <label>Content:</label>
       <Editor
-        apiKey="nx6npnntkk7wswqnjdepnt2aild4rrnektk7b0dzt2dam8wm"
+        apiKey={process.env.REACT_APP_TINY_EDITOR_API_KEY}
         onInit={(_evt, editor) => (editorRef.current = editor)}
         onEditorChange={(content) => setContent(content)}
-        initialValue="<p>Write your Blog Here!</p>"
+        initialValue={content}
         init={{
           height: 500,
           menubar: true,
@@ -134,7 +134,6 @@ const CreateBlog = () => {
             "insertdatetime",
             "media",
             "table",
-            "help",
             "wordcount",
             "emoticons",
             "autosave",
@@ -144,12 +143,11 @@ const CreateBlog = () => {
           ],
           toolbar:
             "undo redo | formatselect | " +
-            "bold italic underline strikethrough forecolor backcolor | " +
-            "alignleft aligncenter alignright alignjustify | " +
+            "bold italic underline forecolor backcolor | " +
             "bullist numlist outdent indent | " +
-            "link image media codesample emoticons | " +
-            "insertdatetime preview fullscreen | " +
-            "removeformat | help",
+            "link image media codesample | " +
+            "preview fullscreen | " +
+            "removeformat",
           content_style: "body { font-family:Inter; font-size:16px }",
           skin: "oxide",
           content_css: "light",

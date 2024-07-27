@@ -117,7 +117,6 @@ export const forgetPasswordController = async (req, res) => {
     }
 }
 
-
 //update prfole
 export const updateProfileController = async (req, res) => {
     try {
@@ -153,9 +152,6 @@ export const updateProfileController = async (req, res) => {
         });
     }
 };
-
-
-
 
 // Test protected route
 export const testController = async (req, res) => {

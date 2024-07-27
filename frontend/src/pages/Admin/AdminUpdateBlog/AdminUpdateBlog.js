@@ -5,9 +5,7 @@ import AdminMenu from "../../../components/Layout/AdminMenu/AdminMenu";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../../context/authContext";
-import { toast } from "react-toastify";
-import "react-quill/dist/quill.snow.css";
-import ReactQuill from "react-quill";
+import { toast } from "react-toastify"; 
 import { Editor } from "@tinymce/tinymce-react";
 
 const AdminUpdateBlog = () => {
@@ -136,11 +134,10 @@ const AdminUpdateBlog = () => {
                 type="file"
                 accept="image/*"
                 onChange={(e) => setPhoto(e.target.files[0])}
-              />
-
+              /> 
               <label>Content:</label>
               <Editor
-                apiKey="nx6npnntkk7wswqnjdepnt2aild4rrnektk7b0dzt2dam8wm"
+                apiKey = {process.env.REACT_APP_TINY_EDITOR_API_KEY}
                 onInit={(_evt, editor) => (editorRef.current = editor)}
                 onEditorChange={(content) => setContent(content)}
                 initialValue={content}
@@ -163,7 +160,6 @@ const AdminUpdateBlog = () => {
                     "insertdatetime",
                     "media",
                     "table",
-                    "help",
                     "wordcount",
                     "emoticons",
                     "autosave",
@@ -173,12 +169,11 @@ const AdminUpdateBlog = () => {
                   ],
                   toolbar:
                     "undo redo | formatselect | " +
-                    "bold italic underline strikethrough forecolor backcolor | " +
-                    "alignleft aligncenter alignright alignjustify | " +
+                    "bold italic underline forecolor backcolor | " + 
                     "bullist numlist outdent indent | " +
-                    "link image media codesample emoticons | " +
-                    "insertdatetime preview fullscreen | " +
-                    "removeformat | help",
+                    "link image media codesample | " +
+                    "preview fullscreen | " +
+                    "removeformat",
                   content_style: "body { font-family:Inter; font-size:16px }",
                   skin: "oxide",
                   content_css: "light",
