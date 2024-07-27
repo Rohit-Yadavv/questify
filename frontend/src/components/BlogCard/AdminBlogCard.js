@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './BlogCard.module.css';
-import moment from 'moment'
+import styles from './BlogCard.module.css'; 
 import { TbEdit } from "react-icons/tb";
 import { MdDeleteOutline } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
